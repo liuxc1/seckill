@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- logback整合日志 -->
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<logger name="com.lxc.intro.microboot.mybaties.dao" level="DEBUG"/>
+	<root level="INFO">
+	</root>
+</configuration>  

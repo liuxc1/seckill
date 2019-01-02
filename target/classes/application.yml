@@ -1,0 +1,26 @@
+server:
+  port: 80
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml      #mybatis的配置文件路径    
+  type-aliases-package: com.liuxc.www.domain            #配置vo下对象的别名
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml                     #扫面mapper文件下的路径
+    
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource           #配置当前要操作的数据源的类型
+    driver-class-name: com.mysql.jdbc.Driver               #配置oracle驱动类
+    url: jdbc:mysql://localhost:3306/liuxc?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false             #配置数据库连接地址
+    username: liuxc                                         #配置数据库连接用户名
+    password: liuxc                                         #配置数据库连接用户密码
+    filters: stat,wall,log4j                                #druid监控过滤器操作
+    dbcp2:
+      min-idle: 5                                          #配置连接池最小连接数
+      initial-size: 5                                      #配置连接池初始化连接数
+      max-total: 12                                        #配置连接池最大连接数
+      max-wait-millis: 3000                                #配置最大超时断开时间
+    
+      
+   
+    
+    
